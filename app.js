@@ -12,6 +12,10 @@ btnIncrease.addEventListener("click", () => {
 
 btnDecrease.addEventListener("click", () => {
     value--;
+    if (value < 0) {
+        value = 0;
+        alert("The number cannot be less than zero.");
+    }
     numberContainer.textContent = value;
 });
 
